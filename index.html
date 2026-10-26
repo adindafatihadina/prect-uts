@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Undangan Pernikahan Cinta & Fajar</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Pinyon+Script&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body class="locked">
+<div id="progress"></div>
+
+<!-- COVER -->
+<div id="cover">
+  <div class="leaves" data-leaves="16"></div>
+  <div class="monogram intro" style="--i:1">C/F</div>
+  <p class="small-caps gold mb-2 intro" style="--i:2">Kami akan menikah</p>
+  <h1 class="names shine intro" style="--i:3">Cinta<em>&amp;</em>Fajar</h1>
+  <p class="mt-3 mb-1 intro" style="--i:4">Kepada Yth.</p>
+  <p class="serif fs-4 mb-4 intro" style="--i:4;font-family:'Cormorant Garamond',serif" id="guestName">Tamu Undangan</p>
+  <button class="btn btn-gold pulse intro" style="--i:5" id="openBtn">Buka Undangan</button>
+</div>
+
+<audio id="bgm" loop preload="none" src="assets/audio/musik.mp3"></audio>
+<button class="float-music" id="floatMusic" aria-label="Putar atau jeda musik"><i>♪</i></button>
+
+<main>
+<!-- HERO -->
+<section id="hero" class="dark">
+  <div class="leaves" data-leaves="14"></div>
+  <div class="container">
+    <div class="row align-items-center g-4 g-lg-5">
+      <div class="col-lg-6">
+        <div class="monogram hero-item" style="--i:0">C/F</div>
+        <p class="small-caps hero-item" style="--i:1">Kami akan menikah</p>
+        <h1 class="names shine hero-item" style="--i:2">Cinta<em>&amp;</em>Fajar</h1>
+        <div class="divider hero-item" style="--i:3"><i>❦</i></div>
+        <p class="fs-4 mb-0 gold hero-item" style="--i:3;font-family:'Cormorant Garamond',serif;letter-spacing:.3em">12 · 12 · 2026</p>
+        <p class="small-caps mt-1 hero-item" style="--i:4">Sabtu</p>
+        <div class="countdown hero-item" style="--i:5">
+          <div><b id="cd-d">0</b><small>Hari</small></div>
+          <div><b id="cd-h">0</b><small>Jam</small></div>
+          <div><b id="cd-m">0</b><small>Menit</small></div>
+          <div id="cdBox"><b id="cd-s">0</b><small>Detik</small></div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="hero-photo hero-item" style="--i:3"><div class="photo photo-in" style="background-image:url('assets/images/foto-1.jpg')"><span>Letakkan foto-1.jpg</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLAYER -->
+<section class="dark" style="padding-top:1rem">
+  <div class="container-s" data-anim="zoom">
+    <div class="player">
+      <div class="fs-5" style="font-family:'Cormorant Garamond',serif">Kita Lewati Berdua</div>
+      <div class="small opacity-75">Overnight</div>
+      <div class="bar"><i id="barFill"></i></div>
+      <div class="d-flex justify-content-between small opacity-75"><span id="tNow">0:00</span><span id="tEnd">0:00</span></div>
+      <div class="text-center mt-1"><button class="play" id="playBtn" aria-label="Putar">▶</button></div>
+    </div>
+    <p class="small-caps mt-4 opacity-75" style="font-size:.62rem">Putar musik selama Anda mengunjungi undangan ini</p>
+  </div>
+</section>
+
+<!-- MEMPELAI -->
+<section class="light alt" id="mempelai">
+  <div class="container">
+    <h2 data-anim="up">Mempelai</h2>
+    <div class="divider" data-anim="up"><i>❦</i></div>
+    <p class="small mx-auto" style="max-width:520px" data-anim="up">Dengan memohon rahmat Tuhan, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri pernikahan kami.</p>
+    <div class="row g-5 mt-1 justify-content-center align-items-start">
+      <div class="col-md-5" data-anim="left">
+        <div class="photo person" style="background-image:url('assets/images/mempelai-wanita.jpg')"><span>mempelai-wanita.jpg</span></div>
+        <h3 class="script gold fs-1 mb-1">Cinta Putri Anderson</h3>
+        <p class="small">Putri dari Bapak Richard Anderson<br>&amp; Ibu Emily Anderson</p>
+      </div>
+      <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center script fs-1 gold" style="min-height:300px" data-anim="zoom">&amp;</div>
+      <div class="col-md-5" data-anim="right">
+        <div class="photo person" style="background-image:url('assets/images/mempelai-pria.jpg')"><span>mempelai-pria.jpg</span></div>
+        <h3 class="script gold fs-1 mb-1">Fajar Smith</h3>
+        <p class="small">Putra dari Bapak Michael Smith<br>&amp; Ibu Sarah Smith</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACARA -->
+<section class="light" id="acara">
+  <div class="container">
+    <h2 data-anim="up">Hari Bahagia</h2>
+    <div class="divider" data-anim="up"><i>❦</i></div>
+    <div class="row g-4 mt-2 justify-content-center">
+      <div class="col-md-6 col-lg-5" data-anim="left">
+        <div class="event-card"><div class="photo card-photo" style="background-image:url('assets/images/lokasi-akad.jpg')"><span>lokasi-akad.jpg</span></div><div class="card-body-s">
+          <div class="icon">⛪</div>
+          <h3 class="fs-3 mb-0">Akad / Pemberkatan</h3><div class="gold fw-medium mb-2">16.00 WIB</div>
+          <div class="small mb-3">Sahid Vanilla Nagoya Hotel<br>Jl. Pembangunan blok VI, Batu Selicin, Lubuk Baja, Batam City</div>
+          <a class="btn btn-pill" target="_blank" rel="noopener" href="https://maps.app.goo.gl/aVqJNCCa4AgHyRAD6">Lihat Lokasi</a>
+        </div></div>
+      </div>
+      <div class="col-md-6 col-lg-5" data-anim="right">
+        <div class="event-card"><div class="photo card-photo" style="background-image:url('assets/images/lokasi-resepsi.jpg')"><span>lokasi-resepsi.jpg</span></div><div class="card-body-s">
+          <div class="icon">🥂</div>
+          <h3 class="fs-3 mb-0">Resepsi</h3><div class="gold fw-medium mb-2">18.00 WIB</div>
+          <div class="small mb-3">Sahid Vanilla Nagoya Hotel<br>Jl. Pembangunan blok VI, Batu Selicin, Lubuk Baja, Batam City</div>
+          <a class="btn btn-pill" target="_blank" rel="noopener" href="https://maps.app.goo.gl/aVqJNCCa4AgHyRAD6">Lihat Lokasi</a>
+        </div></div>
+      </div>
+    </div>
+    <button class="btn btn-outline-dark rounded-pill btn-sm mt-4" id="calBtn" data-anim="up">Simpan ke Kalender</button>
+
+    <div class="row g-5 mt-3 justify-content-center">
+      <div class="col-md-6" data-anim="left">
+        <h2 class="fs-4">Rangkaian Acara</h2>
+        <div class="divider"><i>❦</i></div>
+        <ul class="timeline" id="timeline">
+          <li><b>16.00</b> · Pemberkatan</li>
+          <li><b>17.00</b> · Foto &amp; Koktail</li>
+          <li><b>18.00</b> · Makan Malam</li>
+          <li><b>19.30</b> · Dansa &amp; Pesta</li>
+          <li><b>23.00</b> · Penutup dengan Kembang Api</li>
+        </ul>
+      </div>
+      <div class="col-md-6" data-anim="right">
+        <h2 class="fs-4">Dress Code</h2>
+        <div class="divider"><i>❦</i></div>
+        <p class="script gold fs-2 mb-3">Semi Formal</p>
+        <span class="swatch" style="background:#12332a"></span><span class="swatch" style="background:#5d7a69"></span><span class="swatch" style="background:#c4a35a"></span><span class="swatch" style="background:#e3dfd3"></span><span class="swatch" style="background:#a88a3f"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERI -->
+<section class="light alt" id="galeri">
+  <div class="container">
+    <h2 data-anim="up">Galeri Kami</h2>
+    <div class="divider" data-anim="up"><i>❦</i></div>
+    <div class="row g-2 g-md-3 mt-2" id="gallery">
+      <div class="col-6 col-md-4" data-anim="zoom"><button type="button" class="gal photo" data-src="assets/images/galeri-1.jpg" style="background-image:url('assets/images/galeri-1.jpg')" aria-label="Perbesar foto 1"><span>galeri-1.jpg</span></button></div>
+      <div class="col-6 col-md-4" data-anim="zoom"><button type="button" class="gal photo" data-src="assets/images/galeri-2.jpg" style="background-image:url('assets/images/galeri-2.jpg')" aria-label="Perbesar foto 2"><span>galeri-2.jpg</span></button></div>
+      <div class="col-6 col-md-4" data-anim="zoom"><button type="button" class="gal photo" data-src="assets/images/galeri-3.jpg" style="background-image:url('assets/images/galeri-3.jpg')" aria-label="Perbesar foto 3"><span>galeri-3.jpg</span></button></div>
+      <div class="col-6 col-md-4" data-anim="zoom"><button type="button" class="gal photo" data-src="assets/images/galeri-4.jpg" style="background-image:url('assets/images/galeri-4.jpg')" aria-label="Perbesar foto 4"><span>galeri-4.jpg</span></button></div>
+      <div class="col-6 col-md-4" data-anim="zoom"><button type="button" class="gal photo" data-src="assets/images/galeri-5.jpg" style="background-image:url('assets/images/galeri-5.jpg')" aria-label="Perbesar foto 5"><span>galeri-5.jpg</span></button></div>
+      <div class="col-6 col-md-4" data-anim="zoom"><button type="button" class="gal photo" data-src="assets/images/galeri-6.jpg" style="background-image:url('assets/images/galeri-6.jpg')" aria-label="Perbesar foto 6"><span>galeri-6.jpg</span></button></div>
+    </div>
+  </div>
+</section>
+
+<!-- HADIAH -->
+<section class="dark">
+  <div class="container-s" data-anim="zoom">
+    <div class="icon mx-auto mb-3" style="border:1px solid var(--gold);background:transparent">🎁</div>
+    <h2 class="fs-4">Hadiah Cinta</h2>
+    <p class="small px-3">Kehadiran Anda adalah hadiah terbesar. Namun jika ingin memberi tanda kasih, kontribusi Anda sangat berarti bagi masa depan kami.</p>
+    <div class="qr"><img alt="QR code" id="qrImg" src=""></div>
+    <p class="mb-2 small">BCA · 1234567890 · a.n. Cinta Anderson</p>
+    <button class="btn btn-gold btn-sm" id="copyBtn">Salin Nomor Rekening</button>
+  </div>
+</section>
+
+<!-- RSVP -->
+<section class="light" id="rsvp">
+  <div class="container">
+    <h2 data-anim="up">RSVP</h2>
+    <div class="divider" data-anim="up"><i>❦</i></div>
+    <p class="small" data-anim="up">Mohon konfirmasi kehadiran sebelum <b>28 November 2026</b></p>
+    <div class="row g-5 mt-1 justify-content-center">
+      <div class="col-md-6 col-lg-5" data-anim="left">
+        <form id="rsvpForm" class="text-start" novalidate>
+          <input class="form-control mb-2" id="rName" placeholder="Nama lengkap" required>
+          <select class="form-select mb-2" id="rJumlah"><option>1 orang</option><option>2 orang</option><option>3 orang</option><option>4 orang</option></select>
+          <select class="form-select mb-2" id="rStatus"><option value="hadir">Ya, saya akan hadir</option><option value="tidak">Maaf, saya tidak bisa hadir</option></select>
+          <textarea class="form-control mb-3" id="rPesan" rows="3" placeholder="Ucapan &amp; doa untuk mempelai"></textarea>
+          <button class="btn btn-gold w-100" type="submit">Kirim Konfirmasi</button>
+        </form>
+        <div id="rsvpOk" class="alert alert-success mt-3 d-none" role="status"></div>
+      </div>
+      <div class="col-md-6 col-lg-5" data-anim="right">
+        <h2 class="fs-4 text-center">Informasi Tamu</h2>
+        <div class="divider"><i>❦</i></div>
+        <div class="info-card"><div class="icon">🚌</div><div><b>Transportasi</b><div class="small">Layanan shuttle tersedia dari hotel menuju lokasi acara.</div></div></div>
+        <div class="info-card"><div class="icon">🏨</div><div><b>Akomodasi</b><div class="small">Kamar khusus tersedia di The Garden Hotel. Sebutkan "Cinta &amp; Fajar” untuk harga spesial.</div></div></div>
+        <div class="info-card"><div class="icon">📷</div><div><b>Abadikan Momen</b><div class="small">Bagikan foto Anda dengan tagar #FAJARjatuhCINTA</div></div></div>
+      </div>
+    </div>
+
+    <div class="quote" data-anim="zoom">“Di seluruh dunia, tak ada hati seperti hatimu bagiku. Tak ada cinta seperti cintamu bagiku.”</div>
+
+    <h2 class="fs-4" data-anim="up">Terima Kasih</h2>
+    <p class="small px-3" data-anim="up">Kami sangat bersyukur Anda ada dalam hidup kami dan tak sabar merayakannya bersama.</p>
+    <div class="photo end" data-anim="zoom" style="background-image:url('assets/images/foto-2.jpg')"><div><div class="script fs-2 gold">With love,</div><div class="small-caps">Cinta &amp; Fajar</div></div></div>
+  </div>
+</section>
+</main>
+
+<div class="modal fade" id="infoModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+  <div class="modal-body text-center p-4"><p id="modalText" class="mb-3"></p><button class="btn btn-gold" data-bs-dismiss="modal">Tutup</button></div>
+</div></div></div>
+
+<div class="modal fade" id="photoModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content bg-transparent border-0">
+  <button class="btn-close btn-close-white ms-auto mb-2" data-bs-dismiss="modal" aria-label="Tutup"></button>
+  <img id="photoBig" class="img-fluid rounded" alt="Foto galeri">
+</div></div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
